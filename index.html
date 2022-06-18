@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Humidity Thingy</title>
+    <style media="screen">
+      div {
+        height: 120px;
+        width: 500px;
+        background-image: linear-gradient(90deg, #F5D11C 5.66%, #87a587 52%, #4363FF 94.35%);
+      }
+
+      progress {
+        height:40px;
+        width: 500px;
+
+      }
+    </style>
+
+  </head>
+  <body>
+    {{  }}
+    <script>function timedRefresh(timeoutPeriod) {
+    setTimeout("location.reload(true);",timeoutPeriod);
+    }
+
+    window.onload = timedRefresh(2000);
+  </script>
+  <br><br><br><br>
+      <center><pre>     </pre>
+        <img src="{{url_for('static',filename='legend.jpg') }}" alt="" width="530px"   height='100px'>
+      <div>
+        <br><br><br><br><br>
+        <progress max="100" value= {{ humidity }}></progress>
+      </div>
+
+    </center>
+
+  </body>
+</html>
